@@ -6,8 +6,73 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    
+<body class="debug">
+
+    <!-- start main -->
+    <main id="site_main" class="d-flex">
+        <!-- start menu -->
+        <nav class="menu d-flex direction-column space-between">
+            <div class="function">
+                <div class="logo"></div>
+                <div class="navigation"></div>
+                <div class="playlist"></div>
+            </div>
+            <div class="account">
+                <div class="utente"></div>
+            </div>
+        </nav>
+        <!-- end menu -->
+        <!-- start songs -->
+        <div class="songs">
+            <!-- start upgrade -->
+            <div class="upgrade d-flex justify-content-end align-items-center">
+                <a href="#">Effettua l'upgrade</a>
+            </div>
+            <!-- end upgrade -->
+            <!-- start filters -->
+            <div class="filters d-flex justify-content-center">
+                <ul></ul>
+            </div>
+            <!-- end filters -->
+            <div class="container">
+                <h1>Recently played</h1>
+                <div class="row">
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Lorem ipsum dolor sit.</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, laudantium.</p>
+                <div class="row">
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Lorem ipsum dolor sit.</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, laudantium.</p>
+                <div class="row">
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                    <div class="col-6 col-md-3 col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end songs -->
+    </main>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <footer id="site_footer" class="d-flex space-between align-items-center">
+        <div class="name_song"></div>
+        <div class="player"></div>
+        <div class="action_song"></div>
+    </footer>
+    <!-- end footer -->
     
 </body>
 </html>

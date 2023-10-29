@@ -1,5 +1,205 @@
+/* #region RESET */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* #endregion RESET */
+
+/* #region COLORS */
+
+:root{
+    --spo-dark: #000000;
+    --spo-gray: #a3a3a3;
+    --spo-darkblue: #080b12;
+    --spo-primary: #141922;
+    --spo-footer: #282828;
+    --spo-green: #aff02f;
+    --spo-white: white;
+}
+
+/* #endregion COLORS */
+
+/* #region DEBUG */
+
+.debug #site_main .menu .logo{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.547);
+}
+
+.debug #site_main .menu .navigation{
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 4, 255, 0.547);
+}
+
+.debug #site_main .menu .playlist{
+    height: 150px;
+    width: 100%;
+    background-color: rgba(0, 255, 4, 0.547);
+}
+
+.debug #site_main .menu .utente{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 0, 183, 0.547);
+}
+
+.debug .songs{
+    background-color: blueviolet;
+    height: 90vh;
+}
+
+.debug .songs .upgrade{
+    height: 50px;
+}
+
+.debug .songs .filters ul{
+    width: 600px;
+    height: 20px;
+    background-color: aqua;
+}
+
+.debug [class^="col-"]{
+    height: 200px;
+    background-color: aquamarine;
+    border: 1px dashed red;
+}
+
+.debug #site_footer .name_song,
+.debug #site_footer .action_song{
+    height: 20px;
+    width: 100px;
+    background-color: darkolivegreen;
+}
+
+.debug #site_footer .player{
+    height: 40px;
+    width: 100px;
+    background-color: darkolivegreen;
+}
+
+/* #endregion DEBUG */
+
+/* #region UTILITY */
+
+/* flex */
+
+.d-flex{
+    display: flex;
+}
+
+.direction-column{
+    flex-direction: column;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.justify-content-end{
+    justify-content: end;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+/* column */
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    margin: 0 -1rem;
+    flex-wrap: wrap;
+}
+
+[class^="col-"]{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.col-6{
+    width: calc((100% / 12) * 6);
+}
+
+/* #endregion UTILITY */
+
+/* #region MAIN */
+
+/* menu */
+
+#site_main .menu{
+    background-color: var(--spo-dark);
+    height: 90vh;
+    width: 50px;
+}
+
+/* songs */
+.songs{
+    height: 90vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.songs .upgrade{
+    background-color: var(--spo-darkblue);
+
+    & a{
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--spo-white);
+        border: 1px solid var(--spo-white);
+        margin: 1rem 0;
+        border-radius: 1rem;
+    }
+}
+
+/* #endregion MAIN */
+
+/* #region FOOTER */
+
+#site_footer{
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--spo-footer);
+}
+
+/* #endregion FOOTER */
+
+/* RESPONSIVE LAYOUT */
+
+@media screen and (min-width: 425px) {
+
+    #site_main .menu{
+        width: 160px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    .col-md-3{
+        width: calc((100% / 12) * 3);
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+
+    .col-lg-2{
+        width: calc((100% / 12) * 2);
+    }
+    
 }
