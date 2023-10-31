@@ -370,7 +370,10 @@ a{
 /* upgrade */
 
 .songs .upgrade{
-    background-color: var(--spo-darkblue);
+    background-color: #080b12d6;
+    position: fixed;
+    width: calc(100% - 230px);
+    z-index: 999;
 
     & a{
         padding: 1rem 3rem;
@@ -378,7 +381,7 @@ a{
         text-transform: uppercase;
         color: var(--spo-white);
         border: 1px solid var(--spo-white);
-        margin: 1rem 1rem;
+        margin: 1rem 1.25rem;
         border-radius: 2rem;
         font-size: 12px;
         font-weight: 700;
@@ -392,7 +395,8 @@ a{
 /* filters */
 
 .filters{
-    margin: 1rem 0;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
 
     & li{
         list-style: none;
@@ -471,11 +475,22 @@ a{
     display: flex;
 }
 
-.createBy p{
+.createBy,
+.popoular{
+    margin-bottom: 1.5rem;
+}
+
+.createBy p,
+.popoular p{
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
+.circle{
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
 /* #endregion section songs */
 
 /* #endregion MAIN */
