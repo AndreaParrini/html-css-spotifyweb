@@ -14,6 +14,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* #endregion RESET */
 
 /* #region COLORS */
@@ -138,23 +142,27 @@ body{
 
 /* column */
 .container{
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
 .row{
     display: flex;
-    margin: 0 -1rem;
+    margin: 0 -0.25rem;
     flex-wrap: wrap;
 }
 
 [class^="col-"]{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .col-6{
     width: calc((100% / 12) * 6);
+}
+
+.text-align-center{
+    text-align: center;
 }
 
 /* #endregion UTILITY */
@@ -185,6 +193,10 @@ body{
     text-align: center;
     color: var(--spo-gray);
 
+    & a{
+        color: var(--spo-gray);
+    }
+
     & svg{
         max-width: 25px;
         fill: var(--spo-gray);
@@ -197,9 +209,9 @@ body{
     margin: 0.5rem 0;
 }
 
-.home:hover,
-.search:hover,
-.library:hover {
+.home:hover a,
+.search:hover a,
+.library:hover a{
     color: var(--spo-white);
 }
 
@@ -236,21 +248,42 @@ body{
         font-size: 13px;
         font-weight: 700;
         margin: 1rem 0;
+
+        & a{
+            color: var(--spo-gray);
+        }
     }
 }
 
 .new_playlist span{
     font-size: 14px;
     font-weight: 700;
+    color: var(--spo-gray);
 }
 
 .square{
     width: 40px;
     aspect-ratio: 1;
     background-color: var(--spo-gray);
+    
+    & a{
     color: var(--spo-dark);
     font-size: 32px;
     font-weight: 500;
+    }
+}
+
+
+.new_playlist:hover .square{
+    background-color: var(--spo-white);
+}
+
+.new_playlist:hover .create_playlist{
+    color: var(--spo-white);
+}
+
+.name_playlist a:hover{
+    color: var(--spo-white);
 }
 
 /* account */
@@ -264,10 +297,17 @@ body{
     }
 
     & .name_function{
-        color: var(--spo-gray);
         font-size: 13px;
         font-weight: 500;
     }
+
+    & a{
+        color: var(--spo-gray);
+    }
+}
+
+.install a:hover{
+    color: var(--spo-white);
 }
 
 .profile{
@@ -299,6 +339,18 @@ body{
     width: 100%;
     overflow: auto;
     background-color: var(--spo-primary);
+
+    & h2{
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--spo-white);
+    }
+
+    & p{
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--spo-gray);
+    }
 }
 
 .songs::-webkit-scrollbar {
@@ -326,11 +378,15 @@ body{
         text-transform: uppercase;
         color: var(--spo-white);
         border: 1px solid var(--spo-white);
-        margin: 1rem 0.5rem;
+        margin: 1rem 1rem;
         border-radius: 2rem;
         font-size: 12px;
         font-weight: 700;
     }
+}
+
+.upgrade a:hover{
+    scale: 1.1;
 }
 
 /* filters */
@@ -344,8 +400,11 @@ body{
         font-size: 11px;
         font-weight: 700;
         margin-bottom: 1rem;
-        color: var(--spo-gray);
         padding: 0.25rem;
+    }
+
+    & a{
+        color: var(--spo-gray);
     }
 }
 
@@ -357,6 +416,61 @@ body{
     background: var(--spo-green);
     margin: auto;
 }
+
+.filters a:hover {
+    color: var(--spo-white);
+}
+
+/* recently played */
+
+.recently_played {
+    margin-bottom: 2rem;
+    & h2{
+        margin-bottom: 2rem;
+    }
+    
+}
+
+
+.box_song {
+    margin-bottom: 0.5rem;
+
+    & .title{
+        font-size: 16px;
+        font-weight: 900;
+        color: var(--spo-white);
+        margin: 0.5rem 0;
+    }
+
+    & .singer{
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--spo-gray);
+    }
+}
+
+.cover{
+    position: relative;
+}
+
+.play{
+    height: 100%;
+    width: 100%;
+    background-color: #00000085;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+    & i{
+        font-size: 5em;
+    }
+}
+
+.cover:hover .play{
+    display: flex;
+}
+
 
 /* #endregion section songs */
 
