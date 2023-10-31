@@ -195,13 +195,13 @@ body{
     fill: var(--spo-white);
 }
 
-.name_navigation{
+.name_function{
     display: none;
     font-size: 13px;
     font-weight: 700;
 }
 
-.home .name_navigation{
+.home .name_function{
     color: var(--spo-white);
 }
 
@@ -231,13 +231,51 @@ body{
 }
 
 .square{
-    width: 30px;
+    width: 40px;
     aspect-ratio: 1;
     background-color: var(--spo-gray);
     color: var(--spo-dark);
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 500;
 }
+
+.install {
+    text-align: center;
+
+    & svg{
+        max-width: 15px;
+        fill: var(--spo-gray);
+    }
+
+    & .name_function{
+        color: var(--spo-gray);
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+
+    & .user_container{
+        width: 25px;
+        aspect-ratio: 1;
+        background-color: var(--spo-gray);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    & .name_function{
+        color: var(--spo-white);
+        font-size: 14px;
+        font-weight: 900;
+    }
+}
+
+
 
 /* section songs */
 .songs{
@@ -303,7 +341,22 @@ body{
         margin-left: -1rem;
     }
 
-    .home svg{
+    .search::before,
+    .library::before{
+        content: '';
+        display: block;
+        width: 3px;
+        height: 30px;
+        background: transparent;
+        margin-left: -1rem;
+    }
+
+    .search:hover:before,
+    .library:hover:before{
+        background: var(--spo-green);
+    }
+
+    .navigation svg{
         margin-left: 0.4rem;
     }
 
@@ -320,7 +373,7 @@ body{
         text-align: start;
     }
 
-    .name_navigation{
+    .name_function{
         display: inline-block;
     }
 
@@ -328,6 +381,20 @@ body{
         display: block;
     }
 
+    .install{
+        display: flex;
+        align-items: center;
+        text-align: start;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--spo-gray);
+    }
+
+    .profile{
+        justify-content: start;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
