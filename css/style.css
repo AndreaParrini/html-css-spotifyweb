@@ -120,9 +120,21 @@ body{
     justify-content: center;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .gap-2{
     gap: 0.5rem;
 }
+
+.gap-3{
+    gap: 0.75rem;
+}
+
+/* .space_around{
+    justify-content: space-around;
+} */
 
 /* column */
 .container{
@@ -149,13 +161,15 @@ body{
 
 /* #region MAIN */
 
-/* menu */
+/* #region menu */
 
 #site_main .menu{
     background-color: var(--spo-dark);
     height: 90vh;
     width: 50px;
 }
+
+/* function */
 
 .spotify-logo{
     display: block;
@@ -239,6 +253,8 @@ body{
     font-weight: 500;
 }
 
+/* account */
+
 .install {
     text-align: center;
 
@@ -275,30 +291,74 @@ body{
     }
 }
 
+/* #endregion menu */
 
-
-/* section songs */
+/* #region section songs */
 .songs{
     height: 90vh;
     width: 100%;
     overflow: auto;
+    background-color: var(--spo-primary);
 }
+
+.songs::-webkit-scrollbar {
+    width: 15px;
+}
+
+.songs::-webkit-scrollbar-track {
+    background: var(--spo-white); 
+}
+
+.songs::-webkit-scrollbar-thumb {
+    background-color: var(--spo-gray); 
+    border-radius: 30px;
+    border: 3px solid white;
+}
+
+/* upgrade */
 
 .songs .upgrade{
     background-color: var(--spo-darkblue);
 
     & a{
-        padding: 0.5rem 1rem;
+        padding: 1rem 3rem;
         text-decoration: none;
         text-transform: uppercase;
         color: var(--spo-white);
         border: 1px solid var(--spo-white);
-        margin: 1rem 0;
-        border-radius: 1rem;
+        margin: 1rem 0.5rem;
+        border-radius: 2rem;
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 700;
     }
 }
+
+/* filters */
+
+.filters{
+    margin: 1rem 0;
+
+    & li{
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--spo-gray);
+        padding: 0.25rem;
+    }
+}
+
+.filters ul>li:first-child:after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--spo-green);
+    margin: auto;
+}
+
+/* #endregion section songs */
 
 /* #endregion MAIN */
 
