@@ -744,3 +744,21 @@ margin-bottom: 0.75rem;
     }
     
 }
+
+@media (max-height: 350px) {
+    #site_footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        min-height: 90px;
+    }
+
+    .menu{
+        overflow: auto;
+        padding-bottom: 4rem;
+    }
+
+    .songs{
+        padding-bottom: 3rem;
+    }
+}
