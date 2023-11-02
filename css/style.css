@@ -143,9 +143,9 @@ a{
 .flex_grow_2{
     flex-grow: 2;
 }
-/* .space_around{
-    justify-content: space-around;
-} */
+.flex_end{
+    justify-content: flex-end;
+}
 
 /* column */
 .container{
@@ -379,7 +379,7 @@ a{
 .songs .upgrade{
     background-color: #080b12d6;
     position: fixed;
-    width: calc(100% - 45px);
+    width: calc(100% - 43px);
     z-index: 999;
 
     & a{
@@ -511,12 +511,14 @@ a{
 }
 
 .song{
+    min-width: 30px;
     max-width: 45px;
     margin: 0 0.5rem;
 }
 
 .info_song {
-    margin-right: 2rem;
+    margin-right: 1rem;
+    display: none;
 
     & h5{
         font-size: 12px;
@@ -551,7 +553,7 @@ a{
 .function_player{
 margin-bottom: 0.75rem;
     & i{
-    margin: 0 0.5rem;
+    margin: 0 0.25rem;
     color: var(--spo-white);
     }
 
@@ -563,7 +565,7 @@ margin-bottom: 0.75rem;
     color: var(--spo-white);
 }
 
-.time{
+.bar{
     margin: 0 0.75rem;
     width: 60%;
     height: 3px;
@@ -573,7 +575,7 @@ margin-bottom: 0.75rem;
     cursor: pointer;
 }
 
-.timeless{
+.barless{
     position: absolute;
     top: 0;
     left: 0;
@@ -582,11 +584,11 @@ margin-bottom: 0.75rem;
     width: 20%;
 }
 
-.timeless:hover .hover_timeless{
+.bar:hover .hover_barless{
     display: flex;
 } 
 
-.hover_timeless{
+.hover_barless{
     width: 100%;
     height: 100%;
     background-color: var(--spo-green);
@@ -599,6 +601,22 @@ margin-bottom: 0.75rem;
         position: absolute;
         left: 90%;
     }
+}
+
+.action_song i{
+    margin: 0 0.25rem;
+    color: var(--spo-white);
+}
+
+.action_song .bar{
+    width: 30%;
+    min-width: 70px;
+    display: none;
+}
+
+
+.action_song .hover_barless i{
+    left: 60%;
 }
 
 /* #endregion FOOTER */
@@ -689,6 +707,14 @@ margin-bottom: 0.75rem;
 
     .songs .upgrade{
         width: calc(100% - 230px);
+    }
+
+    .info_song{
+        display: block;
+    }
+
+    .action_song .bar{
+        display: block;
     }
     
 }
