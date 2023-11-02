@@ -419,13 +419,15 @@ a{
     }
 }
 
-.filters ul>li:first-child:after{
+.filters ul>li:after{
     content: '';
     display: block;
-    width: 30px;
+    width: 0px;
+    max-width: 40px;
     height: 3px;
-    background: var(--spo-green);
+    background: transparent;
     margin: auto;
+    transition: width 1s ease-out, background-color 500ms ease;
 }
 
 .filters a:hover {
@@ -440,6 +442,14 @@ a{
         margin-bottom: 2rem;
     }
     
+}
+
+.d_none_lg{
+    display: none;
+}
+
+.d_none_md{
+    display: none;
 }
 
 
@@ -465,7 +475,7 @@ a{
 }
 
 .play{
-    height: 100%;
+    aspect-ratio: 1;
     width: 100%;
     background-color: #00000085;
     position: absolute;
@@ -561,6 +571,7 @@ margin-bottom: 0.75rem;
     & i{
     margin: 0 0.25rem;
     color: var(--spo-white);
+    cursor: pointer;
     }
 
 }
@@ -612,6 +623,7 @@ margin-bottom: 0.75rem;
 .action_song i{
     margin: 0 0.25rem;
     color: var(--spo-white);
+    cursor: pointer;
 }
 
 .action_song .bar{
@@ -715,6 +727,7 @@ margin-bottom: 0.75rem;
         width: calc(100% - 230px);
     }
 
+
     .info_song{
         display: block;
     }
@@ -734,6 +747,10 @@ margin-bottom: 0.75rem;
     .col-md-3{
         width: calc((100% / 12) * 3);
     }
+
+    .d_none_md{
+        display: block;
+    }
     
 }
 
@@ -741,6 +758,10 @@ margin-bottom: 0.75rem;
 
     .col-lg-2{
         width: calc((100% / 12) * 2);
+    }
+
+    .d_none_lg{
+        display: block;
     }
     
 }
@@ -761,4 +782,51 @@ margin-bottom: 0.75rem;
     .songs{
         padding-bottom: 3rem;
     }
+}
+
+/********
+ANIMAZIONI
+*********/
+
+.fa-arrow-rotate-right:hover{
+    animation: rotate34 1s linear;
+}
+
+@keyframes rotate34 {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.icon_song .fa-heart{
+    transition: color 2s;
+}
+
+.icon_song .fa-heart:active{
+    color: red;
+}
+
+.function_player .fa-circle-play{
+    transition: transform 3s;
+}
+
+.function_player .fa-circle-play:hover{
+    transform: scale(1.5)
+}
+
+.filters ul>li:hover:after{
+    width: 100%;
+    background-color: var(--spo-green);
 }
