@@ -530,6 +530,8 @@ a{
     background-color: var(--spo-footer);
 }
 
+/* name_song */
+
 .song{
     min-width: 30px;
     max-width: 45px;
@@ -575,6 +577,8 @@ a{
     flex-direction: column;
     gap: 0.25rem;
 }
+
+/* player */
 
 .function_player{
 margin-bottom: 0.75rem;
@@ -628,6 +632,8 @@ margin-bottom: 0.75rem;
     }
 }
 
+/* action_song */
+
 .action_song > i{
     margin: 0 0.25rem;
     color: var(--spo-white);
@@ -643,7 +649,7 @@ margin-bottom: 0.75rem;
 
 /* #endregion FOOTER */
 
-/* RESPONSIVE LAYOUT */
+/* #region RESPONSIVE LAYOUT */
 
 @media screen and (min-width: 576px) {
 
@@ -788,9 +794,9 @@ margin-bottom: 0.75rem;
     }
 }
 
-/********
-ANIMAZIONI
-*********/
+/* #endregion RESPNSIVE LAYOUT */
+
+/* #region ANIMAZIONI */
 
 .fa-arrow-rotate-right:hover{
     animation: rotate34 1s linear;
@@ -834,3 +840,5 @@ ANIMAZIONI
     width: 100%;
     background-color: var(--spo-green);
 }
+
+/* #endregion ANIMAZIONI */
